@@ -1,0 +1,78 @@
+@import "../themes/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.products {
+  background-color: $clearWhite;
+  width: 100vw;
+  height: 100vh;
+
+  &--routerIndicator {
+    margin: 16px 200px 0 200px;
+    font-size: 14px;
+    color: $lightGray;
+  }
+
+  &--container {
+    margin: 16px 200px;
+    background-color: $white;
+    height: 480px;
+    overflow: auto;
+    scrollbar-color: $secondary;
+  
+
+    &__cards {
+      display: grid;
+      grid-template-columns: 25% 30% 45%;
+
+      &--img {
+        margin: 16px;
+        width: 180px;
+        height: 180px;
+      }
+
+      &--mainInfo{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        &-text{
+          padding-bottom: 32px;
+        }
+      }
+
+      &--ubication{
+        padding-top: 60px;
+        font-size: 12px;
+        color: $lightGray;
+      }
+    }
+
+    hr{
+       background-color: $lightGray;
+       margin: 0 auto;
+       width: 920px;
+    }
+  }
+
+  &--container::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &--container::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+}
+
+@media (max-width: 780px) {
+  .products {
+    background-color: $clearWhite;
+    width: 100vw;
+    height: 100vh;
+  }
+}

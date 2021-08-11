@@ -1,14 +1,20 @@
+import React from 'react';
 import '../styles/Home.scss';
 import Search from '../components/Search';
 
 
 
-function Home() {
+
+const Home = props => {
   return (
     <div className="home">
-      <Search />
+        <Search />
     </div>
   );
-}
+};
 
 export default Home;
+
+
+
+

@@ -1,0 +1,11 @@
+@import '../themes/variables.scss';
+
+.route-indicator-container{
+ display: inline;
+ width: 100%;
+
+ .route-indicator-name{
+   color: $secondary;
+ }
+
+}
