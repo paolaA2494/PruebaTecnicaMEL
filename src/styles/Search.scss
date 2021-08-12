@@ -4,24 +4,24 @@
   background-color: $primary;
   width: 100%;
 
-  &__content {
+  &-content {
     display: grid;
     grid-template-columns: 20% 80%;
     padding: 10px 80px;
     text-align: -webkit-center;
 
-    &--logo {
+    &__logo {
       text-align: end;
       padding: 0 40px;
     }
 
-    &--searhbar {
+    &__search-bar {
       display: flex;
       background-color: $white;
       border-radius: 8px;
       width: 800px;
 
-      &-input {
+      &--input {
         text-decoration: none;
         width: 760px;
         border: 1px solid transparent;
@@ -31,7 +31,7 @@
         font-size: 18px;
       }
 
-      &-icon {
+      &--icon {
         background-color: $clearWhite;
         width: 40px;
         border: 1px solid transparent;
@@ -47,28 +47,28 @@
 
 @media (max-width: 1095px) {
 
-    .search__content {
+    .search-content {
         
         display: block;
         justify-content: center;
 
 
-        &--logo {
+        &__logo {
             text-align: center;
           }
 
-        &--searhbar {
+        &__search-bar {
       
             justify-content: unset;
             width: 200px;
 
 
-            &-input {
+            &--input {
               padding: 8px 0 8px 8px;
               width: 170px;
             }
 
-            &-icon {
+            &--icon {
                 width: 30px;
               }
           }

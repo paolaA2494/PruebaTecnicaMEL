@@ -1,32 +1,18 @@
 @import "../themes/variables.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+
 
 .products {
-  background-color: $clearWhite;
-  width: 100vw;
-  height: 100vh;
 
-  &--routerIndicator {
-    margin: 16px 200px 0 200px;
-    font-size: 14px;
-    color: $lightGray;
-  }
-
-  &--container {
+  &-container {
     margin: 16px 200px;
     background-color: $white;
-    height: 480px;
+    height: 530px;
     overflow: auto;
     scrollbar-color: $secondary;
     
     
-    &__cards {
+    &__card {
       display: grid;
       grid-template-columns: 25% 30% 45%;
       
@@ -62,19 +48,43 @@
     }
   }
 
-  &--container::-webkit-scrollbar {
+  .routerIndicator {
+    margin: 16px 200px 0 200px;
+    font-size: 14px;
+    color: $lightGray;
+  }
+
+  &-container::-webkit-scrollbar {
     -webkit-appearance: none;
   }
 
-  &--container::-webkit-scrollbar:vertical {
+  &-container::-webkit-scrollbar:vertical {
     width: 10px;
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1095px) {
   .products {
-    background-color: $clearWhite;
-    width: 100vw;
-    height: 100vh;
+    &-container{
+      height: 418px;
+      margin: 16px 20px;
+
+
+      &__card {
+        display: grid;
+        grid-template-columns: 35% 45% 20%;
+
+        &--img {
+          margin: 8px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+    }
+
+    .routerIndicator {
+      margin: 16px 80px 0 20px;
+    }
   }
 }
