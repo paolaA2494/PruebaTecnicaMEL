@@ -15,6 +15,23 @@
   width: 100vw;
   height: 100vh;
 
+  &--routerIndicator {
+    margin: 16px 200px 0 200px;
+    font-size: 14px;
+    color: $lightGray;
+  }
+
+  &--container {
+    margin: 16px 200px;
+    background-color: $white;
+    height: 480px;
+    overflow: auto;
+    scrollbar-color: $secondary;
+    
+
+  }
+
+
 }
 
 

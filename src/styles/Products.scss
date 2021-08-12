@@ -24,11 +24,12 @@
     height: 480px;
     overflow: auto;
     scrollbar-color: $secondary;
-  
-
+    
+    
     &__cards {
       display: grid;
       grid-template-columns: 25% 30% 45%;
+      
 
       &--img {
         margin: 16px;
@@ -50,12 +51,13 @@
         padding-top: 60px;
         font-size: 12px;
         color: $lightGray;
+        text-align: center;
       }
     }
 
     hr{
        background-color: $lightGray;
-       margin: 0 auto;
+       margin: 0 auto 20px auto;
        width: 920px;
     }
   }
