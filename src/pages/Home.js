@@ -9,6 +9,7 @@ const Home = props => {
   return (
     <div className="home">
         <Search />
+        {props.children}
     </div>
   );
 };

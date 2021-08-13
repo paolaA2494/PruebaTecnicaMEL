@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Search from '../components/Search';
 import '../styles/Product.scss';
 import axios from "axios";
-import free_shipping from "../assets/images/ic_shipping.png";
 
 
 
@@ -49,22 +47,21 @@ class Product extends Component {
 
         return (                                                                                                   
           <div className="product">
-                 <Search />
-            <div className="product--routerIndicator">Producto / {this.state.dataDeatils.title}</div>
-              <div className="product--container">                                                                              
-                 <div className="product--container__cards" key={this.state.dataDeatils.id}>
-                  <img className="product--container__cards--img"src={this.state.dataDeatils.picture} alt="image_product" />
-                  <div className="product--container__cards--mainInfo">
-                    <label className="product--container__cards--mainInfo-text">
-                      <strong>{`$  ${this.state.dataDeatils.price.amount}`}  {this.state.dataDeatils.free_shipping ? (
-                      <img src={free_shipping} alt="free_shipping" />
-                    ) : (
-                      <></>
-                    )}</strong>
-                    </label>
-                    <span>{this.state.dataDeatils.title}</span>
-                  </div>
-                  <span className="product--container__cards--ubication">{this.state.dataDeatils.ubication}</span>
+            <div className="routerIndicator">Producto / {this.state.dataDeatils.title}</div>
+
+              <div className="product-container">                                                                              
+                 <div className="product-container__mainInfo" key={this.state.dataDeatils.id}>
+                    <img className="product-container__mainInfo--img" src={this.state.dataDeatils.picture} alt="image_product" />
+                    <div className="product-container__mainInfo-content">
+                         <label className="product-container__mainInfo-content--title">Descripción del producto</label>
+                         <span className="product-container__mainInfo-content--text">{this.state.dataDeatils.description}</span>
+                     </div>
+                </div>
+                <div className="product-container__mainActions">
+                  <span className="product-container__mainActions--condition">{`${this.state.dataDeatils.condition} - ${this.state.dataDeatils.sold_quantity} vendidos`}</span>
+                  <label  className="product-container__mainActions--title">{this.state.dataDeatils.title}</label>
+                  <h1  className="product-container__mainActions--price"> {`$ ${this.state.dataDeatils.price.amount} ${this.state.dataDeatils.price.currency}`}</h1>
+                  <button className="product-container__mainActions--button">Comprar</button>
                 </div>
               </div>
           </div>

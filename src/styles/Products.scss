@@ -5,11 +5,16 @@
 .products {
 
   &-container {
-    margin: 16px 200px;
+    margin: 30px 200px;
     background-color: $white;
     height: 530px;
     overflow: auto;
     scrollbar-color: $secondary;
+
+    &--link {
+      text-decoration: none;
+      color: none;
+    }
     
     
     &__card {
@@ -28,8 +33,15 @@
         flex-flow: column nowrap;
         justify-content: center;
 
-        &-text{
+        &-price{
           padding-bottom: 32px;
+          font-size: 24px;
+          color: $secondary;
+        }
+
+        &-title{
+          font-size: 18px;
+          color: $secondary;
         }
       }
 
@@ -61,13 +73,31 @@
   &-container::-webkit-scrollbar:vertical {
     width: 10px;
   }
+
+  &-container::-webkit-scrollbar-button:increment,&-container::-webkit-scrollbar-button {
+    display: none;
+  } 
+
+  &-container::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  &-container::-webkit-scrollbar-thumb {
+    background-color: $lightGray;
+    border-radius: 20px;
+    border: 2px solid $white;
+  }
+
+  &-container::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  }
 }
 
 @media (max-width: 1095px) {
   .products {
     &-container{
       height: 418px;
-      margin: 16px 20px;
+      margin: 30px 20px;
 
 
       &__card {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Search from "../components/Search";
 import "../styles/Products.scss";
 import axios from "axios";
 import free_shipping from "../assets/images/ic_shipping.png";
@@ -34,28 +33,27 @@ class Products extends Component {
   render() {
     return (
       <div className="products">
-        <Search />
-        <div className="products--routerIndicator">Productos</div>
-        <div className="products--container">
+        <div className="routerIndicator">Productos</div>
+        <div className="products-container">
           {this.state.data.map((product) => {
             return (
               <>
-                <div className="products--container__cards" key={product.id}>
-                <Link to={`/product/${product.id}`}>
-                  <img className="products--container__cards--img"src={product.picture} alt="image_product" />
-                </Link>
-                  <div className="products--container__cards--mainInfo">
-                    <label className="products--container__cards--mainInfo-text">
-                      <strong>{`$  ${product.price.amount}`}  {product.free_shipping ? (
+              <Link className="products-container--link" to={`/product/${product.id}`}>
+                <div className="products-container__card" key={product.id}>
+                  <img className="products-container__card--img"src={product.picture} alt="image_product" />
+                  <div className="products-container__card--mainInfo">
+                    <label className="products-container__card--mainInfo-price">
+                      <strong>{`$  ${product.price.amount}`} {product.price.currency} {product.free_shipping ? (
                       <img src={free_shipping} alt="free_shipping" />
                     ) : (
                       <></>
                     )}</strong>
                     </label>
-                    <span>{product.title}</span>
+                    <span className="products-container__card--mainInfo-title">{product.title}</span>
                   </div>
-                  <span className="products--container__cards--ubication">{product.ubication}</span>
+                  <span className="products-container__card--ubication">{product.ubication}</span>
                 </div>
+                </Link>
                 <hr></hr>
               </>
             );
