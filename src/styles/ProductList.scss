@@ -1,0 +1,110 @@
+@import "../themes/variables.scss";
+
+
+
+.products-container {
+  margin: 30px 200px;
+  background-color: $white;
+  height: 530px;
+  overflow: auto;
+  scrollbar-color: $secondary;
+
+  &--link {
+    text-decoration: none;
+    color: none;
+  }
+  
+  
+  &__card {
+    display: grid;
+    grid-template-columns: 25% 30% 45%;
+    
+
+    &--img {
+      margin: 16px;
+      width: 180px;
+      height: 180px;
+    }
+
+    &--mainInfo{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      &-price{
+        padding-bottom: 32px;
+        font-size: 24px;
+        color: $secondary;
+      }
+
+      &-title{
+        font-size: 18px;
+        color: $secondary;
+      }
+    }
+
+    &--ubication{
+      padding-top: 60px;
+      font-size: 12px;
+      color: $lightGray;
+      text-align: center;
+    }
+  }
+
+  hr{
+     background-color: $lightGray;
+     margin: 0 auto 20px auto;
+     width: 920px;
+  }
+}
+
+.products-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.products-container::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.products-container::-webkit-scrollbar-button:increment,.products-container::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.products-container::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+  background-color: $lightGray;
+  border-radius: 20px;
+  border: 2px solid $white;
+}
+
+.products-container::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+
+
+
+@media (max-width: 1095px) {
+
+  .products-container{
+    height: 418px;
+    margin: 30px 20px;
+
+
+    &__card {
+      display: grid;
+      grid-template-columns: 35% 45% 20%;
+
+      &--img {
+        margin: 8px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+  }
+  
+  }

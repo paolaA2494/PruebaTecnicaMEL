@@ -1,0 +1,157 @@
+@import '../themes/variables.scss';
+
+
+
+.product-container {
+    margin: 30px 200px;
+    background-color: $white;
+    height: 630px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+  
+  
+    &__mainInfo {
+      display: flex;
+      flex-flow: column nowrap;
+
+      &--img {
+        margin: 16px;
+        width: 350px;
+        height: 350px;
+      }
+
+      &-content {
+        padding-left: 32px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        &--title {
+           font-size: 28px;
+           font-weight: bolder;
+           color: $secondary;
+           padding-bottom: 32px;
+        }
+
+        &--text{
+           padding-bottom: 32px;
+           font-size: 16px;
+           color: $lightGray;
+        }
+      }
+
+    }
+
+    &__mainActions {
+       display: flex;
+       flex-flow: column nowrap;
+       padding: 32px 32px 0 0;
+
+       &--condition{
+         font-size: 14px;
+         color: $lightGray;
+         margin-bottom: 16px;
+       }
+
+       &--title{
+        font-size: 24px;
+        color: $secondary;
+        padding-bottom: 32px;
+       }
+
+       &--price{
+        font-size: 46px;
+        color: $secondary;
+        padding-bottom: 32px;
+       }
+
+       &--button{
+          
+        width: 342px;
+        height: 40px;
+        background-color: $blue;
+        color: $white;
+        font-size: 18px;
+        border: 1px solid transparent;
+        outline: none;
+        border-radius: 4px;
+        align-self: center;
+      }
+    }
+
+  }
+
+.product-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+.product-container::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+
+.product-container::-webkit-scrollbar-button:increment.product-container::-webkit-scrollbar-button {
+    display: none;
+  } 
+
+.product-container::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+.product-container::-webkit-scrollbar-thumb {
+    background-color: $lightGray;
+    border-radius: 20px;
+    border: 2px solid $white;
+  }
+
+.product-container::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  }
+
+  
+
+@media (max-width: 1095px) {
+
+    .product-container{
+        height: 1145px;
+        margin: 30px 20px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 40%;
+        justify-content: center;
+  
+        &__mainInfo{
+          display: block;
+          text-align: center;
+  
+          &--img {
+            margin: 16px;
+            width: 250px;
+            height: 250px;
+          }
+  
+          &-content{
+            padding: 0 5px;
+          }
+        }
+  
+        &__mainActions {
+         margin: 0  32px;
+         text-align: center;
+         justify-content: flex-end;
+         padding: 0;
+  
+  
+         &--button{
+            
+          width: 220px;
+          margin-bottom: 15px;
+        }
+  
+        }
+       
+  
+      }
+  
+
+}
+  
